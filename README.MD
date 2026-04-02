@@ -163,43 +163,67 @@ Design your own schema for the following tables:
 
 ### Properties (Public)
 
-| Method | Endpoint               | Description          |
-| ------ | ---------------------- | -------------------- |
-| GET    | `/api/v1/property`     | Get all properties   |
-| GET    | `/api/v1/property/:id` | Get property details |
+| Method | Endpoint                     | Description          | Authorization |
+| ------ | ---------------------------- | -------------------- | ------------- |
+| GET    | `/api/v1/property`           | Get all properties   | Public        |
+| GET    | `/api/v1/property/:id`       | Get property details | Public        |
+| GET    | `/api/v1/property/agent/:id` | Get all properties   | Agent         |
+| POST   | `/api/v1/property`           | Create new property  | Agent         |
+| PUT    | `/api/v1/property/:id`       | Update property      | Agent         |
+| DELETE | `/api/v1/property/:id`       | Delete property      | Agent / Admin |
 
 
 ---
 
-### Wishlist (User)
+### Wishlist Items
 
-| Method | Endpoint                       | Description               |
-| ------ | ------------------------------ | ------------------------- |
-| POST   | `/api/v1/wishlist-item`        | Add property to wishlist  |
-| GET    | `/api/v1/wishlist/:wishlistId` | Get user wishlist         |
-| DELETE | `/api/v1/wishlist/:id`         | Remove item from wishlist |
-
----
-
-### Agent Management
-
-| Method | Endpoint               | Description         |
-| ------ | ---------------------- | ------------------- |
-| POST   | `/api/v1/property`     | Create new property |
-| PUT    | `/api/v1/property/:id` | Update property     |
-| DELETE | `/api/v1/property/:id` | Delete property     |
+| Method | Endpoint                                     | Description               | Authorization |
+| ------ | -------------------------------------------- | ------------------------- | ------------- |
+| GET    | `/api/v1/wishlist-item`                      | Get all wishlists         | Admin         |
+| GET    | `/api/v1/wishlist-item/:id`                  | Get wishlist By Id        | User / Admin  |
+| GET    | `/api/v1/wishlist-item/wishlist/:wishlistId` | Get user wishlist         | User          |
+| POST   | `/api/v1/wishlist-item`                      | Add property to wishlist  | User          |
+| DELETE | `/api/v1/wishlist-item/:id`                  | Remove item from wishlist | User          |
 
 ---
 
-### Admin
+### Booked Properties
 
-| Method | Endpoint                    | Description        |
-| ------ | --------------------------- | ------------------ |
-| GET    | `/api/admin/users`          | Get all users      |
-| PATCH  | `/api/admin/users/:id`      | Update user status |
-| DELETE | `/api/admin/properties/:id` | Remove property    |
+| Method | Endpoint                               | Description                  | Authorization |
+| ------ | -------------------------------------- | ---------------------------- | ------------- |
+| GET    | `/api/v1/booked-property`              | Get all booked properties    | Admin         |
+| GET    | `/api/v1/booked-property/:id`          | Get booked property by ID    | User / Admin  |
+| GET    | `/api/v1/booked-property/user/:userId` | Get user's booked properties | User          |
+| POST   | `/api/v1/booked-property`              | Add property to booked list  | User          |
+| DELETE | `/api/v1/booked-property/:id`          | Remove item from booked list | User / Admin  |
 
 ---
+
+### Sold Properties
+
+| Method | Endpoint                             | Description                | Authorization |
+| ------ | ------------------------------------ | -------------------------- | ------------- |
+| GET    | `/api/v1/sold-property`              | Get all sold properties    | Admin         |
+| GET    | `/api/v1/sold-property/:id`          | Get sold property by ID    | User / Admin  |
+| GET    | `/api/v1/sold-property/user/:userId` | Get user's sold properties | User          |
+| POST   | `/api/v1/sold-property`              | Add property to sold list  | User          |
+| DELETE | `/api/v1/sold-property/:id`          | Remove item from sold list | User / Admin  |
+
+---
+
+### Reviews
+
+| Method | Endpoint                  | Description            | Authorization |
+| ------ | ------------------------- | ---------------------- | ------------- |
+| GET    | `/api/v1/review`          | Get all reviews        | Admin         |
+| GET    | `/api/v1/review/user/:id` | Get reviews by user ID | Admin         |
+| GET    | `/api/v1/review/:id`      | Get review by ID       | User / Admin  |
+| POST   | `/api/v1/review`          | Add new review         | User          |
+| PUT    | `/api/v1/review/:id`      | Update review          | User          |
+| DELETE | `/api/v1/review/:id`      | Remove review          | User / Admin  |
+
+---
+
 
 ## Future Improvements
 
