@@ -137,11 +137,13 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 Design your own schema for the following tables:
 
 * **Users** - User authentication and profile data
-* **AgentProfiles** - Additional information for agents
-* **Categories** - Property categories (apartment, land, house)
+* **Agents** - Additional information for agents
 * **Properties** - Property listings
-* **Favorites** - Saved properties by users
-* **Messages** - Communication between users and agents
+* **Wishlist** - Saved properties by users
+* **WishlistItems** - Individual items in users' wishlists
+* **BookedProperty** - Properties booked by users
+* **SoldProperty** - Properties sold by users
+* **Reviews** - User reviews for properties
 
 > 💡 *Think about relationships between tables when designing your schema.*
 
