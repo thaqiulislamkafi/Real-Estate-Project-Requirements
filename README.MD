@@ -39,7 +39,7 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 * Express.js
 * TypeScript
 * Prisma ORM
-* PostgreSQL / MySQL
+* PostgreSQL (NeonDB)
 
 ### Other Tools
 
@@ -61,8 +61,8 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 ### User (Buyer) Features
 
 * Register and login
-* Save properties to favorites
-* Contact agents
+* Save properties to wishlist
+* Contact with verified agents
 * View saved properties
 * Manage user profile
 
@@ -70,7 +70,7 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 
 * Register and login as agent
 * Add new property listings
-* Edit property details
+* Manage their properties (edit/update)
 * Delete properties
 * Upload property images
 * View their listed properties
@@ -79,7 +79,7 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 
 * View all users
 * Manage users (activate/suspend)
-* View all properties
+* Manage all properties
 * Delete inappropriate listings
 * Manage property categories
 
@@ -151,40 +151,41 @@ Design your own schema for the following tables:
 
 ### Authentication
 
-| Method | Endpoint             | Description       |
-| ------ | -------------------- | ----------------- |
-| POST   | `/api/auth/register` | Register new user |
-| POST   | `/api/auth/login`    | Login user        |
-| GET    | `/api/auth/me`       | Get current user  |
+| Method | Endpoint                | Description       |
+| ------ | ----------------------- | ----------------- |
+| POST   | `/api/v1/auth/register` | Register new user |
+| POST   | `/api/v1/auth/login`    | Login user        |
+| GET    | `/api/v1/auth/me`       | Get current user  |
 
 ---
 
 ### Properties (Public)
 
-| Method | Endpoint              | Description          |
-| ------ | --------------------- | -------------------- |
-| GET    | `/api/properties`     | Get all properties   |
-| GET    | `/api/properties/:id` | Get property details |
+| Method | Endpoint               | Description          |
+| ------ | ---------------------- | -------------------- |
+| GET    | `/api/v1/property`     | Get all properties   |
+| GET    | `/api/v1/property/:id` | Get property details |
+
 
 ---
 
-### Favorites
+### Wishlist (User)
 
-| Method | Endpoint             | Description               |
-| ------ | -------------------- | ------------------------- |
-| POST   | `/api/favorites`     | Add property to favorites |
-| GET    | `/api/favorites`     | Get user favorites        |
-| DELETE | `/api/favorites/:id` | Remove favorite           |
+| Method | Endpoint                       | Description               |
+| ------ | ------------------------------ | ------------------------- |
+| POST   | `/api/v1/wishlist-item`        | Add property to wishlist  |
+| GET    | `/api/v1/wishlist/:wishlistId` | Get user wishlist         |
+| DELETE | `/api/v1/wishlist/:id`         | Remove item from wishlist |
 
 ---
 
 ### Agent Management
 
-| Method | Endpoint                    | Description     |
-| ------ | --------------------------- | --------------- |
-| POST   | `/api/agent/properties`     | Add property    |
-| PUT    | `/api/agent/properties/:id` | Update property |
-| DELETE | `/api/agent/properties/:id` | Delete property |
+| Method | Endpoint               | Description         |
+| ------ | ---------------------- | ------------------- |
+| POST   | `/api/v1/property`     | Create new property |
+| PUT    | `/api/v1/property/:id` | Update property     |
+| DELETE | `/api/v1/property/:id` | Delete property     |
 
 ---
 
