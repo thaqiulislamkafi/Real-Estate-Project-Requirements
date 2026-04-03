@@ -213,14 +213,15 @@ Design your own schema for the following tables:
 
 ### Reviews
 
-| Method | Endpoint                  | Description            | Authorization |
-| ------ | ------------------------- | ---------------------- | ------------- |
-| GET    | `/api/v1/review`          | Get all reviews        | Admin         |
-| GET    | `/api/v1/review/user/:id` | Get reviews by user ID | Admin         |
-| GET    | `/api/v1/review/:id`      | Get review by ID       | User / Admin  |
-| POST   | `/api/v1/review`          | Add new review         | User          |
-| PUT    | `/api/v1/review/:id`      | Update review          | User          |
-| DELETE | `/api/v1/review/:id`      | Remove review          | User / Admin  |
+| Method | Endpoint                  | Description                 | Authorization |
+| ------ | ------------------------- | --------------------------- | ------------- |
+| GET    | `/api/v1/review`          | Get all reviews             | Admin         |
+| GET    | `/api/v1/review/user/:id` | Get reviews by user ID      | Admin         |
+| GET    | `/api/v1/review/:id`      | Get review by review ID     | User / Admin  |
+| GET    | `/api/v1/property/:id`    | Get property by property ID | User / Admin  |
+| POST   | `/api/v1/review`          | Add new review              | User          |
+| PUT    | `/api/v1/review/:id`      | Update review               | User          |
+| DELETE | `/api/v1/review/:id`      | Remove review               | User / Admin  |
 
 ---
 
