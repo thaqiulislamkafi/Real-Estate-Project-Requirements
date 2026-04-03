@@ -224,6 +224,9 @@ Design your own schema for the following tables:
 
 ---
 
+## 📚 Additional Resources
+
+- **[API Response](API_RESPONSE.md)** - Detailed endpoint documentation with request/response examples
 
 ## Future Improvements
 
