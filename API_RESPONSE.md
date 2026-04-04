@@ -9,5 +9,6 @@ Complete API response of all entities with request/response specifications . Her
 * [Review Management](All%20API%20Response/REVIEWS.md)
 * [Wishlist Items Management](All%20API%20Response/WISHLIST_ITEMS.md)
 
+**See [README.md](./README.md) for submission guidelines, timeline, and marks.**
 ---
 
