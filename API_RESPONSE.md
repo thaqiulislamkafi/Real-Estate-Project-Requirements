@@ -8,6 +8,7 @@ Complete API response of all entities with request/response specifications . Her
 * [Property Management](All%20API%20Response/PROPERTY.md)
 * [Review Management](All%20API%20Response/REVIEWS.md)
 * [Wishlist Items Management](All%20API%20Response/WISHLIST_ITEMS.md)
+* [Booked Property Management](All%20API%20Response/BOOKED_PROPERTY.md)
 
 ---
 
