@@ -101,6 +101,15 @@ GET /api/v1/review/:id
 **Access:** User  
 **Description:** Add a new review for a property
 
+#### Form Fields
+
+| Field       | Type   | Description                       | Required |
+| ----------- | ------ | --------------------------------- | -------- |
+| rating      | Number | Rating for the property (1-5)     | Yes      |
+| description | String | Detailed review description       | Yes      |
+| propertyId  | Number | ID of the property being reviewed | Yes      |
+| userId      | String | ID of the user writing the review | Yes      |
+
 #### Endpoint
 
 ```
@@ -146,6 +155,14 @@ POST /api/v1/review
 
 **Access:** User  
 **Description:** Update an existing review
+
+#### Form Fields
+
+| Field       | Type   | Description                           | Required |
+| ----------- | ------ | ------------------------------------- | -------- |
+| rating      | Number | Updated rating for the property (1-5) | Optional |
+| description | String | Updated detailed review description   | Optional |
+
 
 #### Endpoint
 
