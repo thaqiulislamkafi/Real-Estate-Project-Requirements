@@ -114,6 +114,19 @@ GET /api/v1/property/:id
 **Access:** Agent  
 **Description:** Add a new property to the system
 
+#### Form Fields
+
+| Field        | Type   | Description                                         |
+| ------------ | ------ | --------------------------------------------------- |
+| agentId      | UUID   | ID of the agent adding the property                 |
+| title        | String | Title of the property                               |
+| description  | String | Detailed description of the property                |
+| imageUrl     | String | URL of the property image                           |
+| location     | String | Location of the property                            |
+| priceRange   | String | Price range for the property                        |
+| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) |
+
+
 #### Endpoint
 
 ```
@@ -166,6 +179,17 @@ POST /api/v1/property
 
 **Access:** Agent  
 **Description:** Update details of an existing property
+
+#### Form Fields
+
+| Field        | Type   | Description                                         |
+| ------------ | ------ | --------------------------------------------------- |
+| title        | String | Title of the property                               |
+| description  | String | Detailed description of the property                |
+| imageUrl     | String | URL of the property image                           |
+| location     | String | Location of the property                            |
+| priceRange   | String | Price range for the property                        |
+| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) |
 
 #### Endpoint
 
