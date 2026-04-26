@@ -116,15 +116,15 @@ GET /api/v1/property/:id
 
 #### Form Fields
 
-| Field        | Type   | Description                                         |
-| ------------ | ------ | --------------------------------------------------- |
-| agentId      | UUID   | ID of the agent adding the property                 |
-| title        | String | Title of the property                               |
-| description  | String | Detailed description of the property                |
-| imageUrl     | String | URL of the property image                           |
-| location     | String | Location of the property                            |
-| priceRange   | String | Price range for the property                        |
-| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) |
+| Field        | Type   | Description                                         | Required                            |
+| ------------ | ------ | --------------------------------------------------- | ----------------------------------- |
+| agentId      | UUID   | ID of the agent adding the property                 | Yes                                 |
+| title        | String | Title of the property                               | Min 3 Characters                    |
+| description  | String | Detailed description of the property                | Min 10 Characters                   |
+| imageUrl     | String | URL of the property image                           | Must be a valid URL                 |
+| location     | String | Location of the property                            | Min 3 Characters                    |
+| priceRange   | String | Price range for the property                        | Min 3 Characters                    |
+| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) | Must be one of the specified values |
 
 
 #### Endpoint
@@ -182,14 +182,14 @@ POST /api/v1/property
 
 #### Form Fields
 
-| Field        | Type   | Description                                         |
-| ------------ | ------ | --------------------------------------------------- |
-| title        | String | Title of the property                               |
-| description  | String | Detailed description of the property                |
-| imageUrl     | String | URL of the property image                           |
-| location     | String | Location of the property                            |
-| priceRange   | String | Price range for the property                        |
-| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) |
+| Field        | Type   | Description                                         | Required                            |
+| ------------ | ------ | --------------------------------------------------- | ----------------------------------- |
+| title        | String | Title of the property                               | Min 3 Characters                    |
+| description  | String | Detailed description of the property                | Min 10 Characters                   |
+| imageUrl     | String | URL of the property image                           | Must be a valid URL                 |
+| location     | String | Location of the property                            | Min 3 Characters                    |
+| priceRange   | String | Price range for the property                        | Min 3 Characters                    |
+| propertyType | Enum   | Type of the property (HOUSE, APARTMENT, COMMERCIAL) | Must be one of the specified values |
 
 #### Endpoint
 
