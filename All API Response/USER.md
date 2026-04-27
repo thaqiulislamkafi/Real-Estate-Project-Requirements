@@ -9,7 +9,7 @@
 #### Endpoint
 
 ```
-GET /api/v1/user
+GET /api/v1/auth
 ```
 
 #### Success Response (200 OK)
@@ -75,7 +75,7 @@ GET /api/v1/user
 #### Endpoint
 
 ```
-GET /api/v1/user/:id
+GET /api/v1/auth/:id
 ```
 
 #### Success Response (201 Created)
