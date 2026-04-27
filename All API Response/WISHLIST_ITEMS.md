@@ -152,7 +152,7 @@ POST /api/v1/wishlist-item
 ```json
 
 {
-    "wishlistId": "0fc9344d-9f92-45af-a535-a2a3c7d0a4c2",
+    "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
     "propertyId": 7,
     "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c"
 }
@@ -197,7 +197,7 @@ DELETE /api/v1/wishlist-item/:id
     "message": "Wishlist item deleted successfully",
     "data": {
         "id": "04a38f80-6ced-4542-8b52-5a9b7083ddd5",
-        "wishlistId": "0fc9344d-9f92-45af-a535-a2a3c7d0a4c2",
+        "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
         "propertyId": 7,
         "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c",
         "addedAt": "2026-04-03T18:19:26.892Z"
@@ -227,7 +227,7 @@ GET /api/v1/wishlist-item/wishlist/:wishlistId
     "data": [
         {
             "id": "8e88515a-b2aa-4040-bcbc-325a8d307fa2",
-            "wishlistId": "af52b28d-8fb3-45c9-ba7b-df1880068c55",
+            "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
             "propertyId": 4,
             "agentId": "bfd8fe55-a821-47b1-b645-424cc7f9889a",
             "addedAt": "2026-03-26T13:50:31.666Z",
