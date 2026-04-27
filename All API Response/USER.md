@@ -105,3 +105,86 @@ GET /api/v1/auth/:id
 
 ---
 
+### 3. Update User Details
+
+**Access:** User / Admin  
+**Description:** Update information for a specific user
+
+#### Endpoint
+
+```
+PUT /api/v1/auth/update-profile/:id
+```
+
+#### Request Body
+
+```json
+
+{
+    "name": "Akash Chowdhury",
+    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+    "contactNumber": "+8801812345678",
+    "address": "Chittagong, Bangladesh"
+}
+
+```
+
+#### Success Response (200 OK)
+
+```json
+
+{
+    "success": true,
+    "message": "Profile updated successfully",
+    "data": {
+        "id": "b2eed1d3-5e87-448f-862d-b581b9a52296",
+        "name": "Akash Chowdhury",
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+        "contactNumber": "+8801812345678",
+        "address": "Chittagong, Bangladesh"
+    }
+}
+
+```
+
+### 4. Delete User
+
+**Access:** Admin  
+**Description:** Delete a user account from the system
+
+#### Endpoint
+
+```
+DELETE /api/v1/auth/:id
+```
+
+#### Success Response (200 OK)
+
+```json
+
+{
+    "success": true,
+    "message": "User deleted successfully",
+    "data": {
+        "id": "72dbd17d-0679-4322-94f3-4636787ed67e",
+        "name": "Al Ehsan Foundation",
+        "email": "alehsanfoundation21@gmail.com",
+        "password": "$2b$10$dZLBgAOanN5/6i634h2/cuxPzAa.GcLfIlHS4YLt5StY5F4JbTN/K",
+        "emailVerified": false,
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+        "role": "USER",
+        "status": "active",
+        "contactNumber": "+8801512345679",
+        "address": "Chittagong, Bangladesh",
+        "generatedAt": "2026-04-27T08:49:20.356Z",
+        "updatedAt": "2026-04-27T08:49:20.356Z"
+    }
+}
+
+```
+
+### Note :
+
+*In Admin Dashboard, in Manage Users Section, here must be update and delete button for each user card. Admin can update and delete any user.he can also visit a specific user details*
+
+*In User Dashboard Profile, here must be update button. User can update own profile and he can view his own profile details*
