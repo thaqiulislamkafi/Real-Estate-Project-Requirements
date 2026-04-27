@@ -34,33 +34,33 @@ GET /api/v1/auth
             "generatedAt": "2026-04-26T15:49:23.571Z",
             "updatedAt": "2026-04-26T15:49:23.571Z"
         },
-        {
-            "id": "e5592ed8-103a-407e-960b-28594e85cfff",
-            "name": "Abdul Hannan",
-            "email": "abdul.hannan@example.com",
-            "password": "hannan123456",
+{
+            "id": "3c1d61d6-25e7-4e03-83dc-a61d90e4e38e",
+            "name": "Nusrat Jahan",
+            "email": "nusrat.jahan@example.com",
+            "password": "$2b$10$5EGTUWmje.b848G5/NjVDOZHu4JlTwtXWhxk5Uf5OFveEWT.X/hU6",
             "emailVerified": false,
             "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
-            "role": "ADMIN",
+            "role": "USER",
             "status": "active",
-            "contactNumber": "+8801812345678",
-            "address": "Chittagong, Bangladesh",
-            "generatedAt": "2026-03-25T14:17:43.469Z",
-            "updatedAt": "2026-03-25T14:17:43.469Z"
+            "contactNumber": "+8801712345678",
+            "address": "Dhaka, Bangladesh",
+            "generatedAt": "2026-03-25T14:17:31.470Z",
+            "updatedAt": "2026-04-25T13:25:48.958Z"
         },
         {
-            "id": "e09213da-bab4-4f99-9c46-324c329db9f0",
-            "name": "Shaiful Islam",
-            "email": "shaifulislam@gmail.com",
-            "password": "shaiful123456",
+            "id": "950c7e11-4af8-44b3-bd90-38ddfbefb836",
+            "name": "Mehedi Hasan",
+            "email": "mehedi.hasan@example.com",
+            "password": "$2b$10$/QqqcApvd0nFFpcKyAHj4u2EjbujZNcEQYfCEfSpOiTNd6ZXSm9mG",
             "emailVerified": false,
             "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
-            "role": "AGENT",
+            "role": "USER",
             "status": "active",
-            "contactNumber": "+8801512345678",
-            "address": "Chattogram, Bangladesh",
-            "generatedAt": "2026-03-25T15:01:51.530Z",
-            "updatedAt": "2026-03-25T15:01:51.530Z"
+            "contactNumber": "+8801612345678",
+            "address": "Sylhet, Bangladesh",
+            "generatedAt": "2026-03-24T14:36:09.684Z",
+            "updatedAt": "2026-04-25T13:27:09.334Z"
         }
     ]
 }
