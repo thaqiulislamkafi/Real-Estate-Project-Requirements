@@ -142,10 +142,10 @@ GET /api/v1/wishlist-item/:id
 POST /api/v1/wishlist-item
 ```
 
-#### Required Id for Add Wishlist Item:
+#### Required Id for Add Wishlist Item: (Mehedi Hasan)
 
-- `wishlistId` (UUID): 0fc9344d-9f92-45af-a535-a2a3c7d0a4c2
-- `userId` (UUID): a80ecf75-dac4-4850-bb37-462bdcf9e726
+- `wishlistId` (UUID): 0d1681c0-aba2-4393-969b-293dbb070999
+- `userId` (UUID): 950c7e11-4af8-44b3-bd90-38ddfbefb836
 
 #### Request Body
 
