@@ -142,6 +142,11 @@ GET /api/v1/wishlist-item/:id
 POST /api/v1/wishlist-item
 ```
 
+#### Required Id for Add Wishlist Item:
+
+- `wishlistId` (UUID): 0fc9344d-9f92-45af-a535-a2a3c7d0a4c2
+- `userId` (UUID): a80ecf75-dac4-4850-bb37-462bdcf9e726
+
 #### Request Body
 
 ```json
