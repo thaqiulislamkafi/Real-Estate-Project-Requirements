@@ -75,7 +75,7 @@ Form Fields:
 #### Endpoint
 
 ```
-GET /api/v1/verification/verify-user/:userId
+POST /api/v1/verification/verify-user/:userId
 ```
 
 #### Request
