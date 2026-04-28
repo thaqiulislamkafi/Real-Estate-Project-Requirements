@@ -155,9 +155,9 @@ POST /api/v1/auth/signin
 
 ### Note :
 
-*Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role*
+*Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
-*In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages*
+*In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages,when he signed in, then he go to his own dashboard(USER|AGENT|ADMIN) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
 
 
