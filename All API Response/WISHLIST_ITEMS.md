@@ -1,15 +1,15 @@
 
 ## Wishlist Items Management
 
-### 1. Get All Wishlist Items
+### 1. Get Wishlist Items by User Id
 
-**Access:** Admin  
-**Description:** Retrieve a list of all wishlist items in app
+**Access:** User 
+**Description:** Retrieve all wishlist items for a specific user
 
 #### Endpoint
 
 ```
-GET /api/v1/wishlist-item
+GET /api/v1/wishlist-item/user/:userId
 ```
 
 #### Success Response (201 Created)
@@ -21,69 +21,70 @@ GET /api/v1/wishlist-item
     "message": "Wishlist items retrieved successfully",
     "data": [
         {
-            "id": "f258d6c3-c9b5-4127-a6f3-0e13d039cce0",
-            "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-            "propertyId": 1,
-            "agentId": "508f7879-e762-4666-869f-539c017df80a",
-            "addedAt": "2026-03-26T13:49:31.779Z",
-            "property": {
-                "id": 1,
-                "agentId": "508f7879-e762-4666-869f-539c017df80a",
-                "title": "Commercial Shop Space",
-                "description": "Street-facing commercial space suitable for retail or small office setup.",
-                "imageUrl": "https://example.com/images/commercial-shop.jpg",
-                "location": "GEC Circle, Chattogram",
-                "priceRange": "$1500-$1900",
-                "propertyType": "COMMERCIAL",
-                "isVerified": false,
-                "isAdvertised": false,
-                "isBought": false,
-                "generatedAt": "2026-03-25T15:27:11.923Z",
-                "updatedAt": "2026-03-25T15:27:11.923Z"
-            },
-            "agent": {
-                "id": "508f7879-e762-4666-869f-539c017df80a",
-                "userId": "b6747d21-d5b8-48c9-babd-8487f58eb92f",
-                "isVerified": false,
-                "isFraud": false
-            }
-        },
-        {
-            "id": "5b96c35a-b614-4937-a443-397ce67c8fa2",
-            "wishlistId": "218e5409-0056-4e65-8ba1-18deb77df79e",
-            "propertyId": 3,
+            "id": "8ea9ed64-79ca-4cba-8e87-fc062dad4ab4",
+            "wishlistId": "4c108bca-0eeb-44cd-9ebe-16272adb923d",
+            "propertyId": 7,
             "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c",
-            "addedAt": "2026-03-26T13:50:14.230Z",
+            "addedAt": "2026-04-29T13:36:28.530Z",
             "property": {
-                "id": 3,
-                "agentId": "508f7879-e762-4666-869f-539c017df80a",
-                "title": "Family House",
-                "description": "Amazing family house with garden, parking, and easy highway access.",
-                "imageUrl": "https://example.com/images/family-house.jpg",
-                "location": "Purbachal,Dhaka",
-                "priceRange": "$2000-$2500",
-                "propertyType": "HOUSE",
-                "isVerified": false,
+                "id": 7,
+                "agentId": "7ff640de-a091-41d9-af5e-1a727674e398",
+                "title": "Modern Apartment in Banani",
+                "description": "Stylish apartment with open floor plan and balcony view.",
+                "imageUrl": "https://images.pexels.com/photos/8469931/pexels-photo-8469931.jpeg",
+                "location": "Banani, Dhaka",
+                "priceRange": "$1800-$2200",
+                "propertyType": "APARTMENT",
+                "isVerified": true,
                 "isAdvertised": false,
                 "isBought": false,
-                "generatedAt": "2026-03-25T15:29:13.081Z",
-                "updatedAt": "2026-04-03T05:44:52.281Z"
+                "generatedAt": "2026-03-25T15:32:29.714Z",
+                "updatedAt": "2026-04-26T08:26:44.006Z"
             },
             "agent": {
                 "id": "913fc870-beba-44de-9a0d-98b3c79ddb2c",
                 "userId": "e09213da-bab4-4f99-9c46-324c329db9f0",
                 "isVerified": false,
-                "isFraud": false
+                "isFraud": true
+            }
+        },
+        {
+            "id": "2706eb7e-f02b-4deb-9bd9-316414c5a87d",
+            "wishlistId": "4c108bca-0eeb-44cd-9ebe-16272adb923d",
+            "propertyId": 1,
+            "agentId": "508f7879-e762-4666-869f-539c017df80a",
+            "addedAt": "2026-04-29T13:37:34.188Z",
+            "property": {
+                "id": 1,
+                "agentId": "508f7879-e762-4666-869f-539c017df80a",
+                "title": "Commercial Shop Space",
+                "description": "Street-facing commercial space suitable for retail or small office setup.",
+                "imageUrl": "https://images.pexels.com/photos/209292/pexels-photo-209292.jpeg",
+                "location": "GEC Circle, Chattogram",
+                "priceRange": "$1500-$1900",
+                "propertyType": "COMMERCIAL",
+                "isVerified": true,
+                "isAdvertised": false,
+                "isBought": true,
+                "generatedAt": "2026-03-25T15:27:11.923Z",
+                "updatedAt": "2026-04-26T19:20:52.626Z"
+            },
+            "agent": {
+                "id": "508f7879-e762-4666-869f-539c017df80a",
+                "userId": "b6747d21-d5b8-48c9-babd-8487f58eb92f",
+                "isVerified": false,
+                "isFraud": true
             }
         }
     ]
 }
         
 ```
+---
 
 ### 2. Get Wishlist Item Details
 
-**Access:** User / Admin  
+**Access:** User  
 **Description:** Retrieve detailed information about a specific wishlist item
 
 #### Endpoint
@@ -98,38 +99,40 @@ GET /api/v1/wishlist-item/:id
 
 {
     "success": true,
-    "message": "Wishlist item details retrieved successfully",
+    "message": "Wishlist item retrieved successfully",
     "data": {
-        "id": "f258d6c3-c9b5-4127-a6f3-0e13d039cce0",
-        "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-        "propertyId": 1,
+        "id": "680154b8-6ded-4354-986c-bf4aed10bf13",
+        "wishlistId": "9171a2cb-b1a2-447d-b4be-8a8b93895d9d",
+        "propertyId": 2,
         "agentId": "508f7879-e762-4666-869f-539c017df80a",
-        "addedAt": "2026-03-26T13:49:31.779Z",
+        "addedAt": "2026-04-29T14:31:20.378Z",
         "property": {
-            "id": 1,
+            "id": 2,
             "agentId": "508f7879-e762-4666-869f-539c017df80a",
-            "title": "Commercial Shop Space",
-            "description": "Street-facing commercial space suitable for retail or small office setup.",
-            "imageUrl": "https://example.com/images/commercial-shop.jpg",
-            "location": "GEC Circle, Chattogram",
-            "priceRange": "$1500-$1900",
+            "title": "Luxury Apartment in Gulshan",
+            "description": "Modern fully furnished apartment with rooftop access and 24/7 security in the heart of Gulshan.",
+            "imageUrl": "https://images.pexels.com/photos/209218/pexels-photo-209218.jpeg",
+            "location": "Gulshan-2, Dhaka",
+            "priceRange": "$2000-$2500",
             "propertyType": "COMMERCIAL",
-            "isVerified": false,
+            "isVerified": true,
             "isAdvertised": false,
-            "isBought": false,
-            "generatedAt": "2026-03-25T15:27:11.923Z",
-            "updatedAt": "2026-03-25T15:27:11.923Z"
+            "isBought": true,
+            "generatedAt": "2026-03-25T15:27:57.790Z",
+            "updatedAt": "2026-04-27T19:05:48.900Z"
         },
         "agent": {
             "id": "508f7879-e762-4666-869f-539c017df80a",
             "userId": "b6747d21-d5b8-48c9-babd-8487f58eb92f",
             "isVerified": false,
-            "isFraud": false
+            "isFraud": true
         }
     }
 }
         
 ```
+
+---
 
 ### 3. Add Wishlist Item
 
@@ -139,22 +142,16 @@ GET /api/v1/wishlist-item/:id
 #### Endpoint
 
 ```
-POST /api/v1/wishlist-item
+POST /api/v1/wishlist-item/:userId
 ```
-
-#### Required Id for Add Wishlist Item: (Mehedi Hasan)
-
-- `wishlistId` (UUID): 0d1681c0-aba2-4393-969b-293dbb070999
-- `userId` (UUID): 950c7e11-4af8-44b3-bd90-38ddfbefb836
 
 #### Request Body
 
 ```json
 
 {
-    "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-    "propertyId": 7,
-    "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c"
+    "propertyId": 3,
+    "agentId": "508f7879-e762-4666-869f-539c017df80a"
 }
 
 ```
@@ -167,15 +164,20 @@ POST /api/v1/wishlist-item
     "success": true,
     "message": "Wishlist item added successfully",
     "data": {
-        "id": "f258d6c3-c9b5-4127-a6f3-0e13d039cce0",
-        "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-        "propertyId": 1,
+        "id": "b5d8eb02-2c5c-4e91-b5f9-04dd0595d930",
+        "wishlistId": "9171a2cb-b1a2-447d-b4be-8a8b93895d9d",
+        "propertyId": 3,
         "agentId": "508f7879-e762-4666-869f-539c017df80a",
-        "addedAt": "2026-03-26T13:49:31.779Z"
+        "addedAt": "2026-04-29T14:31:39.672Z"
     }
 }
         
 ```
+#### Note : 
+
+*Here from client side,userId must be send as params*
+
+---
 
 ### 4. Delete Wishlist Item
 
@@ -196,68 +198,24 @@ DELETE /api/v1/wishlist-item/:id
     "success": true,
     "message": "Wishlist item deleted successfully",
     "data": {
-        "id": "04a38f80-6ced-4542-8b52-5a9b7083ddd5",
-        "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-        "propertyId": 7,
-        "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c",
-        "addedAt": "2026-04-03T18:19:26.892Z"
+        "id": "b036ded4-5ed6-4f65-9821-cd64a233a7dd",
+        "wishlistId": "4c108bca-0eeb-44cd-9ebe-16272adb923d",
+        "propertyId": 4,
+        "agentId": "508f7879-e762-4666-869f-539c017df80a",
+        "addedAt": "2026-04-29T13:38:12.307Z"
     }
 }
         
 ```
-
-### 5. Get Wishlist Items by WishlistId
-
-**Access:** User / Admin  
-**Description:** Retrieve all wishlist items for a specific wishlist
-
-#### Endpoint
-
-```
-GET /api/v1/wishlist-item/wishlist/:wishlistId
-```
-
-#### Success Response (201 Created)
-
-```json
-
-{
-    "success": true,
-    "message": "Wishlist items retrieved successfully",
-    "data": [
-        {
-            "id": "8e88515a-b2aa-4040-bcbc-325a8d307fa2",
-            "wishlistId": "0d1681c0-aba2-4393-969b-293dbb070999",
-            "propertyId": 4,
-            "agentId": "bfd8fe55-a821-47b1-b645-424cc7f9889a",
-            "addedAt": "2026-03-26T13:50:31.666Z",
-            "property": {
-                "id": 4,
-                "agentId": "913fc870-beba-44de-9a0d-98b3c79ddb2c",
-                "title": "Commercial Space in Motijheel",
-                "description": "Prime office space suitable for corporate headquarters.",
-                "imageUrl": "https://example.com/images/motijheel-commercial.jpg",
-                "location": "Motijheel, Dhaka",
-                "priceRange": "$5000-$7000",
-                "propertyType": "COMMERCIAL",
-                "isVerified": false,
-                "isAdvertised": false,
-                "isBought": false,
-                "generatedAt": "2026-03-25T15:31:35.728Z",
-                "updatedAt": "2026-03-25T15:31:35.728Z"
-            },
-            "agent": {
-                "id": "bfd8fe55-a821-47b1-b645-424cc7f9889a",
-                "userId": "04dc6408-3d3f-48e0-b230-5d249c29811e",
-                "isVerified": false,
-                "isFraud": false
-            }
-        }
-    ]
-}
-        
-```
 ---
+
+## Updated Note :
+
+* *In user dashboard, in my wishlist section, here all wishlist items must be shown, Here a delete button in each card, when user delete wishlist item , then the wishlist items removed from My wishlist section*
+
+* *When user click the wishlist item card then he will seen about wishlist item details*
+
+* *My wishlist section will be exist only user dashboard*
 
 ← [Back to Main Documentation](./../README.md)
 
