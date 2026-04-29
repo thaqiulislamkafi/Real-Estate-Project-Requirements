@@ -49,6 +49,7 @@ Form Fields:
 {
     "success": true,
     "message": "User generated successfully",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiYWRmM2FhYmQtOTcyMC00NDFlLWEzNTYtZGUxYTA3MjI4YjBmIiwibmFtZSI6Ik1vaGFtbWFkIFRoYXFpIFVsIElzbGFtIiwiZW1haWwiOiJ0aGFxaXVsaXNsYW1rYWZpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkQmpITlc0UkhaaGlHOG90RjNBSTFUT1cvR24wNWJETVZ2eHhPeEI3bnZLQTQ4NFhpc2g1SmUiLCJlbWFpbFZlcmlmaWVkIjpmYWxzZSwiaW1hZ2UiOiJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFVQS4uLiIsInJvbGUiOiJVU0VSIiwic3RhdHVzIjoiYWN0aXZlIiwiY29udGFjdE51bWJlciI6Iis4ODAxNTEyMzQ1Njc5IiwiYWRkcmVzcyI6IkNoaXR0YWdvbmcsIEJhbmdsYWRlc2giLCJnZW5lcmF0ZWRBdCI6IjIwMjYtMDQtMjlUMDY6MDE6NDMuMDQ3WiIsInVwZGF0ZWRBdCI6IjIwMjYtMDQtMjlUMDY6MDE6NDMuMDQ3WiJ9LCJpYXQiOjE3Nzc0NDI1MDUsImV4cCI6MTc3ODA0NzMwNX0.XTOd_GznxgTSfbwFjD-KvOXA-SwY542C-Sk5_WXP0S0",
     "data": {
         "id": "3f6301a7-5e89-4fb1-a507-629190ec620c",
         "name": "Mohammad Thaqi Ul Islam",
@@ -135,6 +136,7 @@ POST /api/v1/auth/signin
 {
     "success": true,
     "message": "User signed in successfully",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiYWRmM2FhYmQtOTcyMC00NDFlLWEzNTYtZGUxYTA3MjI4YjBmIiwibmFtZSI6Ik1vaGFtbWFkIFRoYXFpIFVsIElzbGFtIiwiZW1haWwiOiJ0aGFxaXVsaXNsYW1rYWZpQG91dGxvb2suY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkQmpITlc0UkhaaGlHOG90RjNBSTFUT1cvR24wNWJETVZ2eHhPeEI3bnZLQTQ4NFhpc2g1SmUiLCJlbWFpbFZlcmlmaWVkIjpmYWxzZSwiaW1hZ2UiOiJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUFVQS4uLiIsInJvbGUiOiJVU0VSIiwic3RhdHVzIjoiYWN0aXZlIiwiY29udGFjdE51bWJlciI6Iis4ODAxNTEyMzQ1Njc5IiwiYWRkcmVzcyI6IkNoaXR0YWdvbmcsIEJhbmdsYWRlc2giLCJnZW5lcmF0ZWRBdCI6IjIwMjYtMDQtMjlUMDY6MDE6NDMuMDQ3WiIsInVwZGF0ZWRBdCI6IjIwMjYtMDQtMjlUMDY6MDE6NDMuMDQ3WiJ9LCJpYXQiOjE3Nzc0NDI1MDUsImV4cCI6MTc3ODA0NzMwNX0.XTOd_GznxgTSfbwFjD-KvOXA-SwY542C-Sk5_WXP0S0",
     "data": {
         "id": "3f6301a7-5e89-4fb1-a507-629190ec620c",
         "name": "Mohammad Thaqi Ul Islam",
@@ -153,12 +155,16 @@ POST /api/v1/auth/signin
 
 ```
 
-### Note :
+### Note : 
 
 *Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
 *In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages,when he signed in, then he go to his own dashboard(USER|AGENT|ADMIN) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
+### Updated Notes : 
 
+* *Now we update our auth process convert into token based system.Token can stored by using SharedPreferences*
+* *When user sign up or sign in successfully then user get a token, this token is used for authentication and authorization in subsequent API requests. User can store this token in SharedPreferences for future use. When user log out then we can remove this token from SharedPreferences*
+* *Token will be sent to backend in every request, in this case, here can be used interceptor like Okhttp*
 
 
