@@ -158,7 +158,7 @@ POST /api/v1/auth/signin
 ### 4. Change Email 
 
 **Access** :  Public
-**Description** : An specific user(USER|Agent) can change his email
+**Description** : An specific user(USER|Agent) can change his email from own profile details
 
 #### Endpoint
 
@@ -204,6 +204,54 @@ PUT /api/v1/auth/user/change-email/:id
 
 ---
 
+### 5. Update Password
+
+**Access** :  Public
+**Description** : User(USER|AGENT) can update thier password from own profile details
+
+#### Endpoint
+
+```json
+PUT /api/v1/auth/update-password/:id
+```
+
+#### Request Body 
+
+```json
+
+{
+    "password": "thaqi123456",
+    "newPassword": "thaqiVai123456"
+}
+
+```
+
+#### Response Body 
+
+```json
+
+{
+    "success": true,
+    "message": "Email Changed Successfully and otp send",
+    "data": {
+        "id": "fe5cdcd5-4db8-42a0-9dea-1612aac98526",
+        "name": "Mohammad Thaqi Ul Islam",
+        "email": "thaqiulislamkafi@outlook.com",
+        "password": "$2b$10$ZqKZPTlEMM91PARZLjV0CuCoECCqOBya0zL6VTJ7OurEwtvSb0Q6K",
+        "emailVerified": false,
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+        "role": "USER",
+        "status": "active",
+        "contactNumber": "+8801512345679",
+        "address": "Chittagong, Bangladesh",
+        "generatedAt": "2026-04-30T05:48:06.253Z",
+        "updatedAt": "2026-05-02T05:40:58.460Z"
+    }
+}
+
+```
+
+---
 
 ### Note : 
 
