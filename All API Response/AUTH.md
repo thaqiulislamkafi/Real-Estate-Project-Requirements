@@ -155,6 +155,56 @@ POST /api/v1/auth/signin
 
 ```
 
+### 4. Change Email 
+
+**Access** :  Public
+**Description** : An specific user(USER|Agent) can change his email
+
+#### Endpoint
+
+```json
+PUT /api/v1/auth/user/change-email/:id
+```
+
+#### Request Body
+
+```json
+
+{
+   "email":"thaqiulislamkafi@outlook.com"
+}
+
+```
+
+#### Response Body
+
+```json
+
+{
+    "success": true,
+    "message": "Email Changed Successfully and otp send",
+    "data": {
+        "id": "fe5cdcd5-4db8-42a0-9dea-1612aac98526",
+        "name": "Mohammad Thaqi Ul Islam",
+        "email": "thaqiulislamkafi@outlook.com",
+        "password": "$2b$10$ZqKZPTlEMM91PARZLjV0CuCoECCqOBya0zL6VTJ7OurEwtvSb0Q6K",
+        "emailVerified": false,
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...",
+        "role": "USER",
+        "status": "active",
+        "contactNumber": "+8801512345679",
+        "address": "Chittagong, Bangladesh",
+        "generatedAt": "2026-04-30T05:48:06.253Z",
+        "updatedAt": "2026-05-02T05:40:58.460Z"
+    }
+}
+
+
+```
+
+---
+
+
 ### Note : 
 
 *Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role and show fresh data according to his userId in everywhere in his dashboard*
