@@ -12,7 +12,7 @@
 POST /api/v1/auth/signup
 ```
 
-Form Fields:
+#### Form Fields:
 
 | Field Name    | Type   | Description                       | Required              |
 | ------------- | ------ | --------------------------------- | --------------------- |
@@ -120,6 +120,13 @@ POST /api/v1/verification/verify-user/:userId
 POST /api/v1/auth/signin
 ```
 
+#### Form Fields
+
+| Field Name | Type   | Description                   | Required             |
+| ---------- | ------ | ----------------------------- | -------------------- |
+| name       | String | The full name of the user     | At lest 3 characters |
+| email      | String | The email address of the user | Valid email format   |
+
 #### Request Body
 
 ```json
@@ -165,6 +172,12 @@ POST /api/v1/auth/signin
 ```json
 PUT /api/v1/auth/user/change-email/:id
 ```
+
+#### Form Fields
+
+| Field Name | Type   | Description                              | Required           |
+| ---------- | ------ | ---------------------------------------- | ------------------ |
+| email      | String | The new email which was user want to set | Valid email format |
 
 #### Request Body
 
@@ -214,6 +227,14 @@ PUT /api/v1/auth/user/change-email/:id
 ```json
 PUT /api/v1/auth/update-password/:id
 ```
+
+#### Form Fields
+
+| Field Name  | Type   | Description                             | Required              |
+| ----------- | ------ | --------------------------------------- | --------------------- |
+| password    | String | The current password of user            | At least 6 characters |
+| newPassword | String | The new password which user want to set | At least 6 characters |
+
 
 #### Request Body 
 
