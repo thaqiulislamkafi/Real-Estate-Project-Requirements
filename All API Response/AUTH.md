@@ -276,14 +276,18 @@ PUT /api/v1/auth/update-password/:id
 
 ### Note : 
 
-*Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role and show fresh data according to his userId in everywhere in his dashboard*
+* *Here a signup pages in app, in sign up pages sign up all fields must be existed,When user sign up then he can see a OTP Email Verification Window, here only feild, if email verification success then he go to his own dashboard(USER|AGENT) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
-*In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages,when he signed in, then he go to his own dashboard(USER|AGENT|ADMIN) according to his role and show fresh data according to his userId in everywhere in his dashboard*
+* *In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages,when he signed in, then he go to his own dashboard(USER|AGENT|ADMIN) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
-### Updated Notes : 
-
-* *Now we update our auth process convert into token based system.Token can stored by using SharedPreferences*
+* *our auth process managed in token based system.Token can stored by using SharedPreferences*
 * *When user sign up or sign in successfully then user get a token, this token is used for authentication and authorization in subsequent API requests. User can store this token in SharedPreferences for future use. When user log out then we can remove this token from SharedPreferences*
 * *Token will be sent to backend in every request, in this case, here can be used interceptor like Okhttp*
+  
+### Updated Notes : 
+
+* *We added Change email feature in our auth management system,in (USER|AGENT) dashboard, their own profile section.Here have change email option as a linked text around their email text. When they click the text ,there have been shown an interface where Change email field visible. When they new email submit, they go to another interface with OTP verifaction of new email.When they successfully verified thier new email by OTP, then automatically return in their Profile.Here must shown success or error popup message*
+
+* *We added Update Password feature too, in (USER|AGENT) dashboard, their have an option to change password as button, when button clicked, their shown an interface with two fields and when successfully thier update pasword, then automatically return in their Profile.Here must shown success or error popup message*
 
 
