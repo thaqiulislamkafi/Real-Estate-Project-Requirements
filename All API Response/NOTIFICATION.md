@@ -78,7 +78,7 @@ GET /api/v1/notification
 ### 2. Get Notifications by ReceiverId
 
 **Access:** User / Agent 
-**Description:** Retrieve notifications for a specific user or agent
+**Description:** Retrieve notifications for a specific user or agent by their userId
 
 #### Endpoint
 
@@ -112,7 +112,7 @@ GET /api/v1/notification/user/:userId
 ### 3. Delete Notification 
 
 **Access:** Admin
-**Description:** Delete a specific notification
+**Description:** Delete a specific notification by notification ID
 
 #### Endpoint
 
@@ -140,3 +140,9 @@ DELETE /api/v1/notification/:id
 ```
 
 ---
+
+### Note :
+
+* *Here in all user(ADMIN|AGENT|USER) interface, in Bottom Navigation Bar, there must be a Notifications icon to access the notification list,here he can see all his notifications as a notification card with timestamp(Must).*
+
+* *In admin interface,Since admin can see all notifications,so here a delete button in each notification card to delete the notification if he wants to delete any notification.*
