@@ -236,7 +236,45 @@ PUT /api/v1/agent/fraud-agent/:id
 
 ```
 
-### Delete Agent
+### 6. Mark Agent as Not Fraud
+
+**Access:** Admin
+**Description:** Mark an agent as not fraudulent
+
+#### Endpoint
+
+```
+PUT /api/v1/agent/fraud-agent/:id
+```
+
+#### Request Body
+
+```json
+
+{
+    "isFraud" : false
+}
+
+```
+
+#### Success Response (200 OK)
+
+```json
+
+{
+    "success": true,
+    "message": "Agent marked as UnFraud successfully",
+    "data": {
+        "id": "7ff640de-a091-41d9-af5e-1a727674e398",
+        "userId": "3b95b14d-d66e-43f1-ba3c-96318dc3fea4",
+        "isVerified": true,
+        "isFraud": false
+    }
+}
+
+```
+
+### 7. Delete Agent
 
 **Access:** Admin
 **Description:** Delete an agent from the system
@@ -268,5 +306,8 @@ DELETE /api/v1/agent/:id
 
 ### Note :
 
-*In Admin Dashboard, in Manage Agents Section, here must be Make Fraud and Make Verified buttons for each agent card. Admin can delete any agent.So, here must be delete icon in agent card.he can also visit a specific agent details*
-        
+* *In Admin Dashboard, in Manage Agents Section, here must be Make Fraud and Make Verified buttons for each agent card. Admin can delete any agent.So, here must be delete icon in agent card.he can also visit a specific agent details*
+
+### Update :
+
+* *In Admin Dashboard, in Manage Agents Section, we bring out UnFraud system, so implement it into Manage agents in admin dashboard.So, it can be added another icon or linked text for the UnFraud functionality in each agent card item.*
