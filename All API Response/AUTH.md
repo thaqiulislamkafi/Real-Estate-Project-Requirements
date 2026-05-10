@@ -258,7 +258,7 @@ POST /api/v1/auth/user/resend-otp
 }
 
 ```
-
+* Note : *Here userId is the id of the user who want to resend OTP for email verification, and name is the name of that user, this name field is used for sending email to user with his name in email template,in all OTP email verfication interface of kotlin project, below the OTP input field, here a linked text named "Resend OTP", when clicked, it will resend the OTP to the user's email according to resend OTP for email verfication doc in 5th section*
 
 ### 6. Update Password
 
