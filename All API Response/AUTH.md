@@ -225,7 +225,7 @@ PUT /api/v1/auth/user/change-email/:id
 #### Endpoint
 
 ```json
-POST /api/v1/auth/user/resend-otp
+PUT /api/v1/auth/user/resend-otp
 ```
 
 #### Request Body
