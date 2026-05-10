@@ -85,53 +85,6 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 
 ---
 
-## Pages & Routes
-
-### Public Routes
-
-| Route             | Page             | Description         |
-| ----------------- | ---------------- | ------------------- |
-| `/`               | Home             | Featured properties |
-| `/properties`     | Properties       | List with filters   |
-| `/properties/:id` | Property Details | Full property info  |
-| `/agents/:id`     | Agent Profile    | Agent details       |
-| `/login`          | Login            | Login form          |
-| `/register`       | Register         | Registration form   |
-
----
-
-### User Routes (Private)
-
-| Route               | Page          | Description      |
-| ------------------- | ------------- | ---------------- |
-| `/favorites`        | Favorites     | Saved properties |
-| `/profile`          | Profile       | User information |
-| `/contact/:agentId` | Contact Agent | Send message     |
-
----
-
-### Agent Routes (Private)
-
-| Route                        | Page          | Description        |
-| ---------------------------- | ------------- | ------------------ |
-| `/agent/dashboard`           | Dashboard     | Agent stats        |
-| `/agent/properties`          | My Properties | Manage listings    |
-| `/agent/properties/new`      | Add Property  | Create new listing |
-| `/agent/properties/:id/edit` | Edit Property | Update listing     |
-
----
-
-### Admin Routes (Private)
-
-| Route               | Page       | Description       |
-| ------------------- | ---------- | ----------------- |
-| `/admin`            | Dashboard  | Platform stats    |
-| `/admin/users`      | Users      | Manage users      |
-| `/admin/properties` | Properties | Manage properties |
-| `/admin/categories` | Categories | Manage categories |
-
----
-
 ## Database Tables
 
 Design your own schema for the following tables:
@@ -144,6 +97,8 @@ Design your own schema for the following tables:
 * **BookedProperty** - Properties booked by users
 * **SoldProperty** - Properties sold by users
 * **Reviews** - User reviews for properties
+* **Notifications** - User notifications for property updates
+* **Verifications** - Verify OTP for user registration 
 
 > 💡 *Think about relationships between tables when designing your schema.*
 
