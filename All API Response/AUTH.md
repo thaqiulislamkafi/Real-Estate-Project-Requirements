@@ -217,7 +217,50 @@ PUT /api/v1/auth/user/change-email/:id
 
 ---
 
-### 5. Update Password
+### 5. Resend OTP for Email Verification
+
+**Access** :  Public
+**Description** : An specific user(USER|Agent) can resend OTP for email verification from own profile details
+
+#### Endpoint
+
+```json
+POST /api/v1/auth/user/resend-otp
+```
+
+#### Request Body
+
+```json
+
+{
+    "email" : "thaqiulislamkafi@outlook.com",
+    "userId" : "dc6d96cf-c832-4430-9f99-7e1dd63e7c87",
+    "name": "Mohammad Thaqi Ul Islam"
+}
+
+```
+
+#### Response Body
+
+```json
+
+{
+    "success": true,
+    "message": "OTP Resend Successfully",
+    "data": {
+        "id": "f2649744-24e5-4bae-b42c-8c5eaf631158",
+        "userId": "dc6d96cf-c832-4430-9f99-7e1dd63e7c87",
+        "otp": "246448",
+        "expiresAt": "2026-05-10T04:45:56.391Z",
+        "generatedAt": "2026-05-10T04:40:59.605Z",
+        "updatedAt": "2026-05-10T04:40:59.605Z"
+    }
+}
+
+```
+
+
+### 6. Update Password
 
 **Access** :  Public
 **Description** : User(USER|AGENT) can update thier password from own profile details
@@ -281,13 +324,16 @@ PUT /api/v1/auth/update-password/:id
 * *In login page, here would be a linkup text named Create new accout?, when user clicked this linked text, user will be gone in SignUp Pages,when he signed in, then he go to his own dashboard(USER|AGENT|ADMIN) according to his role and show fresh data according to his userId in everywhere in his dashboard*
 
 * *our auth process managed in token based system.Token can stored by using SharedPreferences*
+
 * *When user sign up or sign in successfully then user get a token, this token is used for authentication and authorization in subsequent API requests. User can store this token in SharedPreferences for future use. When user log out then we can remove this token from SharedPreferences*
+
 * *Token will be sent to backend in every request, in this case, here can be used interceptor like Okhttp*
+*We added Change email feature in our auth management system,in (USER|AGENT) dashboard, their own profile section.Here have change email option as a linked text around their email text. When they click the text ,there have been shown an interface where Change email field visible. When they new email submit, they go to another interface with OTP verifaction of new email.When they successfully verified thier new email by OTP, then automatically return in their Profile.Here must shown success or error popup message*
+
+* *Here We already added Update Password feature too, in (USER|AGENT) dashboard, their have an option to change password as button, when button clicked, their shown an interface with two fields and when successfully thier update pasword, then automatically return in their Profile.Here must shown success or error popup message*
   
 ### Updated Notes : 
 
-* *We added Change email feature in our auth management system,in (USER|AGENT) dashboard, their own profile section.Here have change email option as a linked text around their email text. When they click the text ,there have been shown an interface where Change email field visible. When they new email submit, they go to another interface with OTP verifaction of new email.When they successfully verified thier new email by OTP, then automatically return in their Profile.Here must shown success or error popup message*
-
-* *We added Update Password feature too, in (USER|AGENT) dashboard, their have an option to change password as button, when button clicked, their shown an interface with two fields and when successfully thier update pasword, then automatically return in their Profile.Here must shown success or error popup message*
+* *We added resend OTP feature, in all OTP email verfication interface of kotlin project, below the OTP input field, here a linked text named "Resend OTP", when clicked, it will resend the OTP to the user's email according to resend OTP for email verfication doc in 5th section*
 
 
