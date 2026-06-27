@@ -33,6 +33,13 @@ The mobile client will be built using **Kotlin Jetpack (Android)** and the backe
 * Retrofit / Ktor Client
 * Coil (Image Loading)
 
+### Web Application
+
+* Next JS
+* Typescript
+* Tanstack Query, Tanstack Table, Tanstack Form
+* Axios
+
 ### Backend
 
 * Node.js
@@ -183,6 +190,7 @@ Design your own schema for the following tables:
 ## 📚 Additional Resources
 
 - **[API Response](API_RESPONSE.md)** - Detailed endpoint documentation with request/response examples
+- **[Next JS App Doc](NEXTJS_APP.md)** - Detailed documentation about Next JS Web Application
 
 ## Future Improvements
 
