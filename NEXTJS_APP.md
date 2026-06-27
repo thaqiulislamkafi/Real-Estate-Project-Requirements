@@ -294,10 +294,10 @@ After login, users are redirected to the dashboard according to their role.
 
 ---
 
-# Buyer Dashboard
+# Buyer Dashboard(USER)
 
 ```
-/dashboard
+/dashboard/user-dashboard
 ```
 
 ---
@@ -305,7 +305,7 @@ After login, users are redirected to the dashboard according to their role.
 ## Dashboard Overview
 
 ```
-/dashboard
+/dashboard/user-dashboard
 ```
 
 Displays
@@ -320,7 +320,7 @@ Displays
 ## My Profile
 
 ```
-/dashboard/my-profile
+/dashboard/user-dashboard/my-profile
 ```
 
 Features
@@ -335,7 +335,7 @@ Features
 ## Wishlist
 
 ```
-/dashboard/wishlist
+/dashboard/user-dashboard/wishlist
 ```
 
 Features
@@ -349,7 +349,7 @@ Features
 ## Booked Properties
 
 ```
-/dashboard/booked-properties
+/dashboard/user-dashboard/booked-properties
 ```
 
 Features
@@ -362,7 +362,7 @@ Features
 ## Notifications
 
 ```
-/dashboard/notifications
+/dashboard/user-dashboard/my-notifications
 ```
 
 Features
@@ -380,7 +380,7 @@ Features
 ## Dashboard
 
 ```
-/dashboard
+/dashboard/agent-dashboard
 ```
 
 Displays
@@ -395,7 +395,7 @@ Displays
 ## Add Property
 
 ```
-/dashboard/add-property
+/dashboard/agent-dashboard/add-property
 ```
 
 Features
@@ -412,7 +412,7 @@ Features
 ## My Properties
 
 ```
-/dashboard/my-properties
+/dashboard/agent-dashboard/my-properties
 ```
 
 Features
@@ -424,30 +424,16 @@ Features
 
 ---
 
-## Edit Property
+
+## My Notifications
 
 ```
-/dashboard/my-properties/[id]
-```
-
-Features
-
-- Update Property Information
-- Upload New Images
-
----
-
-## Sold Properties
-
-```
-/dashboard/sold-properties
+/dashboard/agent-dashboard/my-notifications
 ```
 
 Features
 
-- Sold History
-- Buyer Information
-- Revenue
+- All Notifications
 
 ---
 
@@ -455,10 +441,10 @@ Features
 
 ---
 
-## Dashboard
+## Dashboard(Static)
 
 ```
-/dashboard
+/dashboard/admin-dashboard
 ```
 
 Displays
@@ -466,31 +452,42 @@ Displays
 - Total Users
 - Total Agents
 - Total Properties
-- Total Revenue
-- Platform Statistics
+- Total Reviews
 
 ---
 
 ## Manage Users
 
 ```
-/dashboard/manage-users
+/dashboard/admin-dashboard/all-users
 ```
 
 Features
 
 - View Users
-- Suspend User
-- Activate User
-- Promote Agent
+- Update User
 - Delete User
+
+---
+
+## Manage Agents
+
+```
+/dashboard/admin-dashboard/all-agents
+```
+
+Features
+
+- View Agents
+- Update Agent
+- Delete Agent
 
 ---
 
 ## Manage Properties
 
 ```
-/dashboard/manage-properties
+/dashboard/admin-dashboard/manage-properties
 ```
 
 Features
@@ -502,30 +499,18 @@ Features
 
 ---
 
-## Manage Categories
-
-```
-/dashboard/manage-categories
-```
-
-Features
-
-- Add Category
-- Edit Category
-- Delete Category
-
----
-
 ## Manage Reviews
 
 ```
-/dashboard/manage-reviews
+/dashboard/admin-dashboard/all-reviews
 ```
 
 Features
 
 - View Reviews
+- Update Reviews
 - Delete Reviews
+  
 
 ---
 
@@ -550,7 +535,6 @@ Examples
 - Loading Skeleton
 - Error Boundary
 - Confirmation Dialog
-- Image Gallery
 
 ---
 
@@ -723,9 +707,9 @@ Dashboard
     │
     ├──────────────► Manage Properties
     │
-    ├──────────────► Manage Categories
+    ├──────────────► Manage Agents
     │
-    └──────────────► View Reports
+    └──────────────► View Notifications
 ```
 
 ---
